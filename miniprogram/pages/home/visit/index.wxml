@@ -1,0 +1,90 @@
+<view class="main-d">
+	<van-popup show="{{ showsq }}" bind:close="onClose2" custom-style='  padding: 10px  14px 10px 14px;;border-radius: 14px; width: 70%;'>
+		<view class="shous">
+			<view>
+				<open-data type="userAvatarUrl"></open-data>
+			</view>
+			<view>
+				<open-data type="userNickName"></open-data>
+			</view>
+		</view>
+		<view class="shoq-wz">
+			您尚未登录，不能进行检测申请
+		</view>
+		<view class="buttom but2">
+			<button bindgetuserinfo="bindGetUserInfo" open-type="getUserInfo" bindtap="sq">
+				授权登录
+			</button>
+		</view>
+	</van-popup>
+	<view class="quanj">
+		<button bindcontact open-type="contact">
+			<span class="iconfont icon-zaixianweituo"></span>
+		</button>
+	</view>
+	<van-popup show="{{ show2 }}" round position="bottom" custom-style="" bind:close="onClose">
+		<view class="tl-h3">委托用户</view>
+		<van-cell-group>
+			<van-field wx:if="{{yh==2}}" model:value="{{dwmc}}" label="单位名称：" placeholder="请输入单位名称" input-align="right" />
+			<van-field wx:if="{{yh==1}}" model:value="{{yhxm}}" label="姓名：" placeholder="请输入姓名" input-align="right" />
+			<van-field wx:if="{{yh==2}}" model:value="{{yhxm}}" label="联系人：" placeholder="请输入联系人" input-align="right" />
+			<van-field model:value="{{lxdh}}" label=" 联系电话：" placeholder="请输入联系电话" input-align="right" />
+			<van-field model:value="{{czx}}" label="传真" placeholder="请输入传真" input-align="right" />
+			<van-field model:value="{{dz}}" label="地址：" placeholder="请输入地址" input-align="right" />
+			<van-field model:value="{{bz}}" label="备注：" placeholder="仲裁检测，请您完善另一方信息" input-align="right" autosize />
+		</van-cell-group>
+		<view class="buttom" bindtap="tcc">确定</view>
+	</van-popup>
+	<view class="detection-main">
+		<view>
+			<view class="de-wz">委托用户：</view>
+			<view class="de-xz">
+				<view data-id="1" bindtap="xz2" class="{{yh==1?'xzcg':'xzsb'}}">个人</view>
+				<view data-id="2" bindtap="xz2" class="{{yh==2?'xzcg':'xzsb'}}">单位</view>
+			</view>
+		</view>
+		<view>
+			<view class="de-wz">样品类型：</view>
+			<view class="de-xz">
+				<view data-id="有色金属检测" bindtap="xz" class="{{lx=='有色金属检测'?'xzcg':'xzsb'}}">有色金属检测</view>
+				<view data-id="环境检测" bindtap="xz" class="{{lx=='环境检测'?'xzcg':'xzsb'}}">环境检测</view>
+			</view>
+		</view>
+		<view bindtap="cs" wx:if="{{!show}}">
+			<view class="de-wz"> 样品名称： </view>
+			<van-field model:value="{{ mc}}" clearable placeholder=" 请输入样品名称 " border="{{ false }}" />
+		</view>
+		<view bindtap="cs" wx:if="{{!show}}">
+			<view class="de-wz"> 样品数量： </view>
+			<van-field model:value="{{ sl }}" clearable placeholder=" 请输入样品数量 " border="{{ false }}" />
+		</view>
+		<view bindtap="cs" wx:if="{{!show}}">
+			<view class="de-wz"> 样品状态： </view>
+			<van-field model:value="{{ zt }}" clearable placeholder=" 请输入样品状态 " border="{{ false }}" />
+		</view>
+		<view bindtap="cs" wx:if="{{!show}}">
+			<view class="de-wz"> 取样地点： </view>
+			<van-field model:value="{{dd }}" clearable placeholder=" 请输入取样地点 " border="{{ false }}" />
+		</view>
+		<view bindtap="onDisplay">
+			<view class="de-wz"> 预约时间： </view>
+			<van-field model:value="{{date}}" readonly clearable placeholder=" 请输入预约时间 " border="{{ false }}" />
+
+		</view>
+		<van-calendar show="{{ show }}" type="range" bind:close="onClose" bind:confirm="onConfirm" />
+		<view bindtap="cs" wx:if="{{!show}}">
+			<view class="de-wz">检测用途： </view>
+			<van-field model:value="{{yt }}" clearable placeholder=" 请输入检测用途 " border="{{ false }}" />
+		</view>
+		<view bindtap="cs" wx:if="{{!show}}">
+			<view class="de-wz">备注： </view>
+			<van-field model:value="{{ bz }}" clearable placeholder=" 请输入备注信息 " border="{{ false }}" />
+		</view>
+
+
+
+	</view>
+
+
+	<view class="buttom">提交审核</view>
+</view>

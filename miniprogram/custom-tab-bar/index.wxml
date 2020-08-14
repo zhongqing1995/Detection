@@ -1,0 +1,58 @@
+<!--miniprogram/pages/index/index.wxml-->
+
+<view class="main">
+
+
+	<view class="bottom-tab">
+
+		<view bindtap="switchTab" data-url="home" data-index="1" class="{{selected ==1?'xzcg':'xzsb'}}">
+			<view>
+				<span class="iconfont icon-yemian-copy-copy"></span>
+			</view>
+			<view>
+				首页
+			</view>
+		</view>
+
+
+		<button class="tab-button" bindcontact open-type="contact">
+			<view>
+				<span class="iconfont icon-zaixianzixun"></span>
+			</view>
+			<view>
+				咨询
+			</view>
+		</button>
+
+
+		<view bindtap="switchTab" data-index="3" data-url="detection" class="{{selected ==3?'xzcg':'xzsb'}}">
+			<view class="tab-zxy">
+				<span class="iconfont icon-jiance"></span>
+
+			</view>
+			<view class="tab-zxy-wz">
+				我要检测{{selected }}
+			</view>
+		</view>
+		<view bindtap="switchTab" data-index="4" data-url="servic"  class="{{id==4?'xzcg':'xzsb'}}">
+
+			<view>
+				<span class="iconfont icon-fuwu"></span>
+			</view>
+			<view>
+				服务
+			</view>
+		</view>
+		<view bindtap="switchTab" data-id="5" class="{{id==5?'xzcg':'xzsb'}}">
+
+			<view>
+				<span class="iconfont icon-wode"></span>
+			</view>
+			<view>
+				我的
+			</view>
+		</view>
+	</view>
+
+
+</view>

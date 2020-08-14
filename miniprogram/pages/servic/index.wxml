@@ -1,0 +1,112 @@
+<view class="m2">
+<!-- <van-tabs active="100739" bind:change="onChange" border="false" color="rgba(244, 158, 0, 1)">
+  <van-tab title="有色要闻" name="100739"/>
+  <van-tab title="行业资讯" name="100740"/>
+  <van-tab title="公示公告" name="100741"/>
+</van-tabs> -->
+<van-notice-bar
+  left-icon="fire-o"
+  text="欢迎使用掌信检测小程序，操作指南请查收"
+	scrollable='false'
+	data-id="1597020684545" bindtap="tz" data-a="details/index"
+/>
+	<view class="home-jcly">
+		<view class="tille-1">
+		有色要闻
+		</view>
+				<view class="home-list" wx:for="{{xw_list}}" wx:key="this" wx:for-item="items" data-id="{{items.id}}" bindtap="tz" data-a="details/index">
+				<view class="home-list-left">
+					<view>
+						<image src="{{items.preimage}}"></image>
+					</view>
+					<view>{{items.title}}</view>
+				</view>
+				<view class="home-list-right">
+					<view>{{items.desc}}</view>
+					<view class="home-list-bottom">
+						<view>
+							<view>
+								<van-icon name="underway-o" />
+							</view>
+							<view>{{items.pubtime}}</view>
+						</view>
+						<view>热点</view>
+					</view>
+				</view>
+			</view>
+
+
+			<view class="buttom " bindtap="jc">加载更多</view>
+	<!-- <view class="home-list">
+			<view class="home-list-left"  bindtap="tz"  data-id="1591103566882"  data-a="details/index">
+				<view>
+					<image src="../../images/jc1.jpg"></image>
+				</view>
+				<view>矿产、冶金检测</view>
+			</view>
+			<view class="home-list-right">
+				<view>有色金属矿、有色冶金矿、黑色金属矿、稀土稀有贵金属矿、非金属矿…</view>
+				<view class="home-list-bottom">
+					<view> <button bindcontact open-type="contact">咨询</button></view>
+
+					<view bindtap="tz" data-a="detection/index">在线委托</view>
+				</view>
+			</view>
+		</view> -->
+
+		<!-- <view class="home-list">
+			<view class="home-list-left" data-id="1591099949578"  bindtap="tz" data-a="details/index">
+				<view>
+					<image src="../../images/jc2.jpg"></image>
+				</view>
+				<view>水质检测</view>
+			</view>
+			<view class="home-list-right">
+				<view>工业废水、生活饮用水、地表水、地下水、二次供水、污水、海水…</view>
+				<view class="home-list-bottom">
+					<view> <button bindcontact open-type="contact">咨询</button></view>
+					<view bindtap="tz" data-a="detection/index">在线委托</view>
+				</view>
+			</view>
+		</view>
+
+
+
+		<view class="home-list" >
+			<view class="home-list-left" data-id="1591102105208"  bindtap="tz" data-a="details/index">
+				<view>
+					<image src="../../images/jc3.jpg"></image>
+				</view>
+				<view>环境检测</view>
+			</view>
+			<view class="home-list-right">
+				<view>室内空气、工作场所空气、环境空气、工业废气、车内空气检测…</view>
+				<view class="home-list-bottom">
+					<view> <button bindcontact open-type="contact">咨询</button></view>
+					<view bindtap="tz" data-a="detection/index">在线委托</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="home-list">
+			<view class="home-list-left"  data-id="1591104841545"  bindtap="tz" data-a="details/index">
+				<view>
+					<image src="../../images/jc4.jpg"></image>
+				</view>
+				<view>其他检测</view>
+			</view>
+			<view class="home-list-right">
+				<view>食品检测、初级农产品金属检测、有毒有害物质、有色金属微量元素…</view>
+				<view class="home-list-bottom">
+					<view> <button bindcontact open-type="contact">咨询</button></view>
+					<view  bindtap="tz" data-a="detection/index">在线委托</view>
+				</view>
+			</view>
+		</view>
+ -->
+
+
+
+	</view>
+
+</view>

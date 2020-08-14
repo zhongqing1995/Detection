@@ -1,0 +1,102 @@
+<view class="user">
+	<view class="user-top">
+		<view>
+			<image src="{{list.avatarUrl}}"></image>
+		</view>
+		<view class="user-wz">
+			<view>{{list.nickName}}</view>
+			<view>
+				<view wx:if='{{!show}}' class="dlo">认证用户</view>
+				<view bindtap="sz">个人设置</view>
+				<view wx:if='{{show}}' class="dlo">
+					<button bindgetuserinfo="bindGetUserInfo" open-type="getUserInfo" class="buto" bindtap="sq">
+						授权登录
+					</button>
+				</view>
+			</view>
+		</view>
+		<image class="bg_ware" src="https://moyv.top/wechat/images/bg_wave.gif"></image>
+	</view>
+	<view class="user-jgg">
+		<view bindtap="tz" data-a="home/schedule/index" data-id="1">
+			<span class="iconfont icon-icon-test"></span>
+			<view>评估中</view>
+		</view>
+		<view bindtap="tz" data-a="home/schedule/index" data-id="2">
+			<span class="iconfont icon-daifukuan"></span>
+			<view>待付款</view>
+		</view>
+		
+		<view bindtap="tz" data-a="home/schedule/index" data-id="4">
+			<span class="iconfont icon-woyaojiance"></span>
+			<view>检测中</view>
+		</view>
+
+		<view bindtap="tz" data-a="home/schedule/index" data-id="5">
+			<span class="iconfont icon-yiwancheng"></span>
+			<view>已完成</view>
+		</view>
+	
+	</view>
+	<view class="user-xzlb">
+		<van-cell is-link>
+			<view slot="title" class="user-lf" bindtap="tz" data-a="detection/index">
+				<span class="iconfont icon-jiance1"></span>
+				<view>我要检测</view>
+			</view>
+		</van-cell>
+		<van-cell is-link>
+			<view slot="title" class="user-lf" bindtap="tz" data-a="user/datum/index">
+				<span class="iconfont icon-jibenziliao"></span>
+				<view>基本资料</view>
+			</view>
+		</van-cell>
+		<van-cell is-link>
+			<view slot="title" class="user-lf" bindtap="tz" data-a="user/problem/index">
+			<span class="iconfont icon-changjianwenti"></span>
+				<view>常见问题</view>
+			</view>
+		</van-cell>
+
+	<button bindcontact open-type="contact">
+			<van-cell is-link>
+				<view slot="title" class="user-lf">
+					<span class="iconfont icon-zaixianweituo"></span>
+					<view>联系客服</view>
+				</view>
+			</van-cell>
+		</button>
+			<button open-type="feedback">
+			<van-cell is-link>
+				<view slot="title" class="user-lf">
+					<span class="iconfont icon-tishi"></span>
+					<view>意见反馈</view>
+				</view>
+			</van-cell>
+		</button>
+			<van-cell is-link>
+			<view slot="title" class="user-lf ol" bindtap="ql" >
+			<van-icon name="bar-chart-o" />
+				<view>清理缓存</view>
+			</view>
+		</van-cell>
+	</view>
+	<view>
+		<!-- <van-popup show="{{ show}}" round position="bottom" custom-style="height: 25%" bind:close="onClose">
+			<view class="user-top height">
+				<view>
+					<open-data type="userAvatarUrl"></open-data>
+				</view>
+				<view class="user-wz ">
+					<view>
+						<open-data type="userNickName"></open-data>
+					</view>
+					<view>
+						<view>您正在授权登录掌信检测</view>
+					</view>
+		
+				</view>
+			</view>
+		</van-popup> -->
+	</view>
+</view>

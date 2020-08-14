@@ -1,0 +1,81 @@
+<view class="main">
+
+	<view class="invoice-list">
+		<view>订单编号：{{xq_list.protocol.code}}</view>
+		<view>开票金额：<span>￥{{xq_list.protocol.totalamount}}</span>
+			<view class="vani">
+				<van-icon name="warning-o" />
+			</view>
+		</view>
+	</view>
+
+	<view class="invoice-list">
+
+		<view>
+			<view>发票类型：</view>
+			<view class="rado">
+				<van-radio-group value="{{ radio }}" bind:change="onChange">
+					<van-radio icon-size="18" name="1" checked-color="#F49E00">增值税电子普通发票</van-radio>
+					<van-radio icon-size="18" name="2" checked-color="#F49E00">纸质发票</van-radio>
+				</van-radio-group>
+			</view>
+		</view>
+		<view>
+			<view>抬头类型：</view>
+			<view class="rado">
+				<van-radio-group value="{{ radio2 }}" bind:change="onChange2">
+					<van-radio  icon-size="18" name="1" checked-color="#F49E00">个人或事业单位</van-radio>
+					<van-radio  icon-size="18" name="2" checked-color="#F49E00">企业</van-radio>
+				</van-radio-group>
+			</view>
+		</view>
+
+    
+
+		<view>
+			<view>发票抬头：</view>
+			<view class='ttlx'>
+				<view> 个人</view>
+				<view>
+					<van-icon name="arrow" />
+				</view>
+			</view>
+		</view>
+
+
+	<view wx:if="{{radio2=='2'}}">
+			<view>抬头类型：</view>
+			<view class="rado">
+		  <van-field
+    value="{{ value }}"
+    placeholder="纳税人识别号"
+    border="{{ false }}"
+    bind:change="onChange"
+        input-align="right"
+  />
+			</view>
+		</view>
+		<view>
+			<view>设为默认抬头</view>
+			<view class='ttlx2'>
+				<van-radio-group value="{{ radio3 }}" bind:change="onChange3">
+
+					<van-radio name="1"  icon-size="18" checked-color="#F49E00"></van-radio>
+				</van-radio-group>
+			</view>
+		</view>
+	</view>
+	<view class="invoice-list invoice-list2">
+	<view>
+			<view>发票内容：</view>
+			<view class='ttlx'>
+				<van-radio-group value="{{ radio3 }}" bind:change="onChange3">
+					<van-radio name="1"  icon-size="18" checked-color="#F49E00">明细</van-radio>
+				</van-radio-group>
+			</view>
+		</view>
+
+
+  </view>
+     <view class="buttom2">提交申请</view>
+</view>

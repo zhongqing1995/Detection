@@ -1,0 +1,15 @@
+<view class="main mt">
+
+<view class="zfc-main">
+
+<view class="zfc">
+<van-icon name="success" />
+</view>
+<view class="zfc-wz">
+完成支付
+</view>
+
+</view>
+	<view class="buttom2" bindtap="tz" data-a="home/schedule/index">进度追踪</view>
+	<view class="buttom" bindtap="tz" bindtap="tz" data-a="detection/index">继续委托</view>
+</view>

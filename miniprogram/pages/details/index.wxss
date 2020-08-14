@@ -1,0 +1,236 @@
+/* miniprogram/pages/details/index.wxss */
+.detail-tl{
+  font-size:48rpx;
+font-family:PingFang;
+width: 90%;
+margin:0 auto;
+margin-top: 10px;
+margin-bottom: 10px;
+font-weight:bold;
+text-align: center;
+color:rgba(51,51,51,1);
+line-height:70rpx;
+}
+.fenweix{
+  position: fixed;
+  right: 10px;
+  top:50%;
+  width: 40px;
+
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 9px;
+}
+.fenweix>view:nth-child(2){
+  width: 40px;
+  padding-top: 9px;
+  background:  #6AC23C;
+  height: 40px;
+}
+.p_class>span {
+  text-align: center!important;
+  margin: 0 auto!important;
+  display: block!important;
+}
+
+.fenweix van-icon {
+  color: #fff;
+  font-size: 20px;
+}
+.fenweix>view:nth-child(1){
+  width: 40px;
+  padding-top: 9px;
+  background:  rgba(244, 158, 0, 1);
+  height: 40px;
+}
+.fenweix span{
+  font-size: 20px;
+  color: #fff;
+}
+.fenweix button{
+
+width: auto !important;
+height: auto;
+background: transparent;
+margin: 0px;
+padding: 0px;
+overflow: visible;
+font-weight: initial;
+display: initial;
+line-height: initial;
+}
+.detail-sj{
+  font-size:14px;
+  display: flex;
+  justify-content: center;
+font-family:PingFang;
+font-weight:400;
+color:rgba(153,153,153,1);
+line-height:40rpx;
+text-align: center;
+}
+.detail-sj>view{
+  margin-right: 15px;
+}
+.p_class{
+  font-size:16px;
+font-family:PingFang;
+font-weight:400;
+color:rgba(51,51,51,1);
+line-height:60rpx;
+text-indent:20px
+}
+.detil{
+  padding: 10px 15px;
+  font-size:14px;
+  overflow: hidden;
+min-height: 60vh;
+  font-family:PingFang;
+}
+
+.home-ggtp {
+  height: 91px;
+
+  margin: 0px 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.home-list-bottom {
+  display: flex;
+  justify-content: space-between
+}
+.home-jcly{padding-top: 1px;}
+.home-list-bottom>view:nth-child(2) {
+  width: 55px;
+  height: 21px;
+
+  background: rgba(244, 158, 0, 1);
+  border: 1px solid rgba(244, 158, 0, 1);
+  border-radius: 13px;
+  color: #fff;
+  text-align: center;
+  margin: 5px;
+  margin-top: 7px;
+  
+}
+
+.home-list-bottom>view:nth-child(1) {
+
+  height: 26px;
+  display: flex;
+  color: #999999;
+  border-radius: 13px;
+  text-align: center;
+  margin: 6px;
+  padding-top: 2.5px;
+  font-family: PingFang;
+
+
+}
+.home-list-bottom>view:nth-child(1)>view:nth-child(1) 
+  {
+margin-top: 2px;
+margin-right: 5px;
+  }
+.home-list-right {
+  width: calc(100% - 134px);
+}
+
+.home-list-right>view:nth-child(1) {
+  font-size: 13px;
+  font-family: PingFang;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  line-height: 20px;
+  overflow: hidden;
+text-overflow: ellipsis;
+display:-webkit-box; 
+-webkit-box-orient:vertical; 
+-webkit-line-clamp:2; 
+
+
+}
+
+.home-list {
+  display: flex;
+  justify-content: space-between;
+margin-top: 14px;
+padding-bottom: 9px;
+border-bottom: 1px solid rgba(230, 230, 230, 1); 
+
+}
+
+
+
+.home-list-left {
+  position: relative;
+  width: 124px;
+  height: 82px;
+}
+
+.home-list-left>view:nth-child(1) {
+  width: 124px;
+  height: 82px;
+  border-radius: 3px;
+  position: absolute;
+}
+
+.home-list-left>view:nth-child(2) {
+  width: 124px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 3px;
+  padding-left: 6px;
+  font-size: 13px;
+  font-family: PingFang;
+  color: rgba(51, 51, 51, 1);
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+.m2{
+  padding-top: 1px;
+}
+.home-jcly {
+
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+}
+.home-list-bottom{
+  margin-top: 8px;
+}
+.home-list-bottom button {
+  background: #fff;
+  margin: 0px;
+  padding: 0px;
+  font-weight: initial;
+  display: initial;
+  line-height: initial;
+  font-size: .85rem;
+  color: rgba(153, 153, 153, 1);
+
+}
+.de-main{
+  animation: fadeIn 1.2s;
+}
+.m3{
+  background: #f8f8f8;
+  padding-top: 15px;
+  width: 100%;
+
+
+}
+.tille-1 {
+  font-size: 18px;
+  font-family: PingFang;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  color: rgba(51, 51, 51, 1);
+  border-left: 2px solid rgba(244, 158, 0, 1);
+}

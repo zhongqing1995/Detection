@@ -1,0 +1,72 @@
+/* miniprogram/pages/detection/index.wxss */.detection-main
+{
+  background:rgba(255,255,255,1);
+border-radius:6px;
+
+}
+.main{
+  padding-top: 1px;
+}
+.detection-main{
+  margin:15px;
+  border-radius: 6px;
+  overflow: hidden;
+  padding:8px
+}
+.main-d{
+  padding-top: 1px;
+}
+.de-wz{
+  font-size:14px;
+font-family:PingFang;
+font-weight: bold;
+
+
+}
+
+.main .van-tab--active {
+  color: rgba(244, 158, 0, 1);
+}
+
+
+.main .van-tabs__line {
+  color: rgba(244, 158, 0, 1);
+  background-color: rgba(244, 158, 0, 1);
+}
+.de-wz{
+  padding-top: 2px;
+}
+.de-wz span{
+  color: #FF0000FF;
+  
+}
+.detection-main .van-cell {
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+
+}
+
+.detection-main van-field {
+  width: calc(100% - 87px);
+  
+  }
+  
+.detection-main>view{
+  border-bottom: 1px solid #f2f2f2 ;
+  padding: 20px 10px;
+  display: flex;
+}
+.op{
+  opacity: 0;
+}
+.buttom{
+  height:46px;
+background:rgba(244,158,0,1);
+border-radius:3px;
+color: white;
+font-size: 17px;
+text-align: center;
+padding-top:10px;
+margin: 15px;
+}

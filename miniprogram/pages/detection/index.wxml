@@ -1,0 +1,157 @@
+<view class="main-d">
+	<van-dialog id="van-dialog" />
+	<van-popup show="{{ showsq }}" bind:close="onClose2" custom-style='  padding: 10px  14px 10px 14px;;border-radius: 14px; width: 70%;'>
+		<view class="shous">
+			<view>
+				<open-data type="userAvatarUrl"></open-data>
+			</view>
+			<view>
+				<open-data type="userNickName"></open-data>
+			</view>
+		</view>
+		<view class="shoq-wz">
+			您尚未登录，不能进行检测申请
+		</view>
+		<view class="buttom but2">
+			<button bindgetuserinfo="bindGetUserInfo" open-type="getUserInfo" bindtap="sq">
+				授权登录
+			</button>
+		</view>
+	</van-popup>
+	<view class="detection-main">
+		<view>
+			<view class="de-wz">委托用户：</view>
+			<view class="de-xz">
+				<view data-id="1" bindtap="xz" class="{{yh=='1'?'xzcg':'xzsb'}}">个人</view>
+				<view data-id="2" bindtap="xz" class="{{yh=='2'?'xzcg':'xzsb'}}">单位</view>
+			</view>
+		</view>
+	</view>
+	<view class="detection-main talb">
+		<view>
+			<view class="de-wz"> 检测类别：</view>
+			<view class="de-xz">
+				<view data-id="1" bindtap="xz2" class="{{lb=='1'?'xzcg':'xzsb'}}">有色金属检测</view>
+				<view data-id="6" bindtap="xz2" class="{{lb=='6'?'xzcg':'xzsb'}}">环境检测</view>
+			</view>
+		</view>
+		<view>
+			<view class="de-wz"> 检测类型：</view>
+			<view class="de-xz">
+				<view data-id="1" bindtap="xz3" class="{{lx=='1'?'xzcg':'xzsb'}}">委托</view>
+				<view data-id="2" bindtap="xz3" class="{{lx=='2'?'xzcg':'xzsb'}}">仲裁</view>
+				<view data-id="3" bindtap="xz3" class="{{lx=='3'?'xzcg':'xzsb'}}">其他</view>
+			</view>
+		</view>
+		<view>
+			<view class="de-wz"> 服务类型：</view>
+			<view class="de-xz">
+				<view data-id="1" bindtap="xz4" class="{{fw=='1'?'xzcg':'xzsb'}}">标准</view>
+				<view data-id="2" bindtap="xz4" class="{{fw=='2'?'xzcg':'xzsb'}}">加急</view>
+			</view>
+		</view>
+		<view>
+			<view class="de-wz"> 报告获取方式：</view>
+			<view class="de-xz xz2">
+				<view data-id="1" bindtap="xz5" class="{{fs=='1'?'xzcg':'xzsb'}}">自取</view>
+				<view data-id="2" bindtap="xz5" class="{{fs=='2'?'xzcg':'xzsb'}}">传真</view>
+				<view data-id="4" bindtap="xz5" class="{{fs=='4'?'xzcg':'xzsb'}}">快递 </view>
+			</view>
+		</view>
+		<view wx:if="{{fs==1}}">
+			<view class="de-wz col"> 自取地址：</view>
+			<view class="de-xz xz2 col2">
+				湖南省长沙市芙蓉区张公岭亚大路99号
+				<view bindtap="dh">
+					导航</view>
+			</view>
+		</view>
+	</view>
+	<van-popup show="{{ show }}" round position="bottom" custom-style="" bind:close="onClose">
+		<view class="tl-h3">委托用户</view>
+		<van-cell-group>
+			<van-field wx:if="{{yh==2}}" model:value="{{dwmc}}" label="单位名称：" placeholder="请输入单位名称" input-align="right" />
+			<van-field wx:if="{{yh==1}}" model:value="{{yhxm}}" label="姓名：" placeholder="请输入姓名" input-align="right" />
+			<van-field wx:if="{{yh==2}}" model:value="{{yhxm}}" label="联系人：" placeholder="请输入联系人" input-align="right" />
+			<van-field model:value="{{lxdh}}" label=" 联系电话：" placeholder="请输入联系电话" input-align="right" />
+			<van-field model:value="{{czx}}" label="传真" placeholder="请输入传真" input-align="right" />
+			<van-field model:value="{{dz}}" label="地址：" placeholder="请输入地址" input-align="right" />
+			<van-field model:value="{{bz}}" label="备注：" placeholder="仲裁检测，请您完善另一方信息" input-align="right" autosize />
+		</van-cell-group>
+		<view class="buttom" bindtap="tcc">确定</view>
+	</van-popup>
+	<view>
+		<view class="tl-h2">样品信息</view>
+		<view class="quote-list2" wx:for="{{yp_list.protocolitems}}" wx:key="this" wx:for-item="items">
+			<view bindtap="tz" data-a="detection/detection-c/index" data-id="{{items.id}}" wx:if="{{!items.checkitemname}}">
+				<view class="main-seach-wz1">
+					<view>
+						样品委托单：
+					</view>
+					<view class="imgop">
+						<image src="http://jc.tabbyedu.com/pay/file/{{items.attchment}}"></image>
+					</view>
+				</view>
+			</view>
+			<view bindtap="tz" data-a="detection/detection-e/index" data-id="{{items.id}}" wx:if="{{items.checkitemname}}">
+				<view class="main-seach-wz1">
+					<view>
+						样品名称：
+					</view>
+					<view>
+						{{items.samplename}}
+					</view>
+				</view>
+				<view class="main-seach-wz1">
+					<view>
+						样品编号：
+					</view>
+					<view>
+						{{items.originalid}}
+					</view>
+				</view>
+				<view class="main-seach-wz1">
+					<view>
+						检测项目：
+					</view>
+					<view>
+						{{items.checkitemname}}
+					</view>
+				</view>
+				<view class="main-seach-wz1">
+					<view>
+						其他信息：
+					</view>
+					<view>
+						<span> {{items.remark}}</span>
+					</view>
+				</view>
+			</view>
+			<view class="list-xzq">
+				<view>
+					<van-icon name="arrow" />
+				</view>
+				<view bindtap="sc" data-id="{{items.id}}">
+					<van-icon name="delete" class="red" />
+				</view>
+			</view>
+		</view>
+		<view class="xz-fs">
+			<view class="quote-list" bindtap="tz" data-a="detection/detection-e/index">
+				<view>
+					<van-icon name="plus" class="white" />
+				</view>
+				<view>添加样品信息</view>
+			</view>
+			<view>或</view>
+			<view class="quote-list" bindtap="tz" data-a="detection/detection-c/index">
+				<view>
+					<span class="iconfont icon-paizhao"></span>
+				</view>
+				<view>拍照极速上传</view>
+			</view>
+		</view>
+		<view class="m-wz1"> 样品检测信息繁多，点击拍照极速上传</view>
+	</view>
+	<view class="buttom" bindtap="tjbj">提交待报价</view>
+</view>

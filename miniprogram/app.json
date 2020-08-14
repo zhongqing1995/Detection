@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/datum/index",
+    "pages/home/report/index",
+    "pages/user/problem/index",
+    "pages/home/schedule/index",
+    "pages/detection/detection-e/index",
+    "pages/home/number/index",
+    "pages/home/visit/index",
+    "pages/details/index",
+    "pages/detection/index",
+    "pages/home/quote/index",
+    "pages/detection/detection-d/index",
+    "pages/user/seach/index",
+    "pages/home/invoice/index",
+    "pages/home/index",
+    "pages/user/index",
+    "pages/servic/index",
+    "pages/detection/detection-f/index",
+    "pages/detection/detection-g/index",
+    "pages/home/report_2/index"
+  ],
+  "window": {
+    "backgroundColor": "#f7f7f7",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "掌信检测",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,71 @@
+<view class="main mt">
+
+	<view class="zanwu" wx:if="{{cx_list.length==0}}">
+		<image src="../../../images/zan.jpg"></image>
+		<view>暂无检测报告</view>
+		<view>
+			当前暂无检测信息，如有疑问可咨询 <span> <button bindcontact open-type="contact"> 在线客服</button> </span> </view>
+		<view>
+			服务电话：400-9669-523
+		</view>
+		<view bindtap="tz" data-a="../../../pages/detection/index">在线委托</view>
+	</view>
+	<view class="main-seach" wx:for="{{cx_list}}" wx:key="this" wx:for-item="items">
+		<view class="main-seach-bh"> 
+			<view>
+				<van-icon name="orders-o" />
+				<view>委托编号：{{items.code}}</view>
+			</view>
+			<view class="buttom ys1" wx:if="{{items.status==0}}">待处理</view>
+						<view class="buttom ys2" wx:if="{{items.status==2}}">待付款</view>
+			<view class="buttom ys2" wx:if="{{items.status==1}}">审核中</view>
+			<view class="buttom ys3" wx:if="{{items.status==3}}">已付款</view>
+			<view class="buttom ys4" wx:if="{{items.status==4}}">已受理</view>
+
+			<view class="buttom ys1" wx:if="{{items.status==5}}">已完成</view>
+
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				检测类别：
+			</view>
+			<view>
+				{{items.checktypeid==1?"有色金属元素":"环保检测项目"}}
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				委托时间：
+			</view>
+			<view>
+				{{items.createtime}}
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+			客户经理：
+			</view>
+			<view>
+				李登科
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				合计金额：
+			</view>
+			<view>
+				<span> 评估中</span>
+			</view>
+		</view>
+		<view class="main-seach-wz2">
+	<view bindtap="tz" data-a="../../../pages/detection/detection-d/index" data-id="{{items.id}}">查看详情</view>
+
+			<view bindtap="tz" data-a="../../../pages/home/invoice/index" data-id="{{items.id}}">申请发票</view>
+
+
+
+		</view>
+	</view>
+
+	
+</view>

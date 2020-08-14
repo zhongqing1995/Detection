@@ -1,0 +1,10 @@
+<view class="det-main">
+<van-dialog id="van-dialog" />
+	<view class="detection-main">
+		<view>
+			<view class="de-wz"><span>*</span> 样品委托单:<span  data-id="1596507828594"  bindtap="tz" data-a="details/index">(查看委托单示例)</span> </view>
+			<van-uploader  file-list="{{ fileList }}" max-count='1'  multiple  bind:after-read="afterRead"   bind:delete="de" />
+		</view>
+	</view>
+	<view class="buttom" bindtap="bc">保存</view>
+</view>

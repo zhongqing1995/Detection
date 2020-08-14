@@ -1,0 +1,190 @@
+<view class="home">
+
+
+	<view class="home-top" bindtap="te">
+		<view bindtap="tz" data-a="home/quote/index">
+			<view>
+				<span class="iconfont icon-me-zixunbaojia  icon-zaixianweituo"></span>
+			</view>
+			<view>
+				咨询报价
+			</view>
+		</view>
+		<view bindtap="tz" data-a="detection/index">
+			<view>
+				<span class="iconfont   icon-zixunbaojia"></span>
+			</view>
+			<view>
+				在线委托
+			</view>
+		</view>
+		<view bindtap="tz" data-a="home/schedule/index">
+			<view>
+				<span class="iconfont icon-jinduzhuizong"></span>
+			</view>
+			<view>
+				进度追踪
+			</view>
+		</view>
+		<view  bindtap="tz" data-a="home/report/index"> 
+			<view>
+				<span class="iconfont icon-baogaochaxun"></span>
+			</view> 
+			<view>
+				报告查询
+			</view>
+		</view>
+		
+	</view>
+
+<view class="home-pd"><image class="bg_ware" src="https://moyv.top/wechat/images/bg_wave.gif"></image></view>
+	<view class="home-jfg">
+		<view>
+			<image src="../../images/jgg-1.gif"></image>
+		</view>
+		<view bindtap="tz" data-a="detection/index">
+			立即报价
+		</view>
+		<view class="home-jfg2" >
+			<view data-a="home/visit/index" bindtap="tz">
+				<view>
+					<span class="iconfont icon-shangmenquyang"></span>
+				</view>
+				<view>上门取样</view>
+			</view>
+			<view  data-a="home/number/index" bindtap="tz">
+				<view >
+					<span class="iconfont icon-fapiaoshenqing"></span>
+				</view>
+				<view>发票申请</view>
+			</view>
+			<view>
+				<button bindcontact open-type="contact">
+					<view>
+						<span class="iconfont icon-mashangtousu"></span>
+					</view>
+					<view>服务投诉</view>
+				</button>
+			</view>
+
+			<view bindtap="call">
+				<view>
+					<span class="iconfont icon-yijianhujiao"></span>
+				</view>
+				<view>一键呼叫</view>
+			</view>
+		</view>
+	</view>
+	<swiper class='home-gg' autoplay='true' vertical='true' circular='true' interval='8000'>
+		<block wx:for="{{tz_list}}" wx:key="this" wx:for-item="items">
+			<swiper-item class="home-gg2">
+				<view>
+					<view>头条</view>
+				</view>
+				<view data-id="{{items.id}}" bindtap="tz"  data-a="details/index">{{items.title}}</view>
+			</swiper-item>
+		</block>
+	</swiper>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+	<view class="home-ggtp" bindtap="tzxcx">
+		<image src="../../images/gg-2.gif"></image>
+	</view>
+
+
+	<view class="home-wntj">
+		<view class="tille-1">
+			为您推荐
+		</view>
+		<view>
+			<view class="home-fl" bindtap="tz"  data-id="1591103566882"  data-a="details/index">
+				<view>
+					<image src="../../images/jc1.jpg"></image>
+				</view>
+				有色金属检测
+			</view>
+			<view class="home-fl" data-id="1591102105208"  bindtap="tz" data-a="details/index">
+				<view>
+					<image src="../../images/jc3.jpg"></image>
+				</view>
+				环境检测
+			</view>
+
+
+
+		</view>
+
+
+	</view>
+	<view class="home-jcly">
+		<view class="tille-1">
+			检测领域
+		</view>
+
+		<view class="home-list">
+			<view class="home-list-left"  bindtap="tz"  data-id="1591103566882"  data-a="details/index">
+				<view>
+					<image src="../../images/jc1.jpg"></image>
+				</view>
+				<view>矿产、冶金检测</view>
+			</view>
+			<view class="home-list-right">
+				<view>有色金属矿、有色冶金矿、黑色金属矿、稀土稀有贵金属矿、非金属矿…</view>
+				<view class="home-list-bottom">
+					<view> <button bindcontact open-type="contact">咨询</button></view>
+					<view class="home-view2"  bindtap="tz" data-a="detection/index">在线委托</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="home-list">
+			<view class="home-list-left" data-id="1591099949578"  bindtap="tz" data-a="details/index">
+				<view>
+					<image src="../../images/jc2.jpg"></image>
+				</view>
+				<view>水质检测</view>
+			</view>
+			<view class="home-list-right">
+				<view>工业废水、生活饮用水、地表水、地下水、二次供水、污水、海水…</view>
+				<view class="home-list-bottom">
+					<view> <button bindcontact open-type="contact">咨询</button></view>
+					<view class="home-view2"   bindtap="tz" data-a="detection/index">在线委托</view>
+				</view>
+			</view>
+		</view>
+
+
+
+		<view class="home-list" >
+			<view class="home-list-left" data-id="1591102105208"  bindtap="tz" data-a="details/index">
+				<view>
+					<image src="../../images/jc3.jpg"></image>
+				</view>
+				<view>环境检测</view>
+			</view>
+			<view class="home-list-right">
+				<view>室内空气、工作场所空气、环境空气、工业废气、车内空气检测…</view>
+				<view class="home-list-bottom">
+					<view> <button bindcontact open-type="contact">咨询</button></view>
+					<view class="home-view2"  bindtap="tz" data-a="detection/index">在线委托</view>
+				</view>
+			</view>
+		</view>
+		<view class="home-list">
+			<view class="home-list-left"  data-id="1591104841545"  bindtap="tz" data-a="details/index">
+				<view>
+					<image src="../../images/jc4.jpg"></image>
+				</view>
+				<view>其他检测</view>
+			</view>
+			<view class="home-list-right">
+				<view>食品检测、初级农产品金属检测、有毒有害物质、有色金属微量元素…</view>
+				<view class="home-list-bottom">
+					<view> <button bindcontact open-type="contact">咨询</button></view>
+					<view  class="home-view2"  bindtap="tz" data-a="detection/index">在线委托</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+</view>

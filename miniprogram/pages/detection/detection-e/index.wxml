@@ -1,0 +1,44 @@
+<view class="det-main">
+	<view class="detection-main">
+<van-dialog id="van-dialog" />
+		<view>
+			<view class="de-wz"><span>*</span> 样品名称: </view>
+			<van-field model:value="{{ mc }}" clearable placeholder="如铅精矿，铁粉等" border="{{ false }}" bind:change="onChange" />
+		</view>
+		<view class="disbok">
+			<view class="de-wz"><span>*</span> 样品编号: </view>
+			<view class="input-list">
+				<view wx:for="{{conLists}}" wx:key="index" class="quote-bh">
+					<view class="quote-list" bindtap="add">
+						<view>
+							<van-icon name="plus" />
+						</view>
+					</view>
+					<van-field value="{{conLists[index].bh}}" placeholder="样品编号: " border="{{ false }}" bind:change='changeConTitle' data-index='{{index}}' />
+					<view class="quote-list2">
+						<view bindtap="del" data-index='{{index}}'>
+							<van-icon name="delete" class="red" />
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="de-wz"><span>*</span> 检测项目: </view>
+			<van-field model:value="{{ xm }}" clearable placeholder="如Fe、Zn等" border="{{ false }}" />
+		</view>
+		<view>
+			<view class="de-wz"><span class="op">*</span> 其他信息: </view>
+			<van-field model:value="{{ qt }}" clearable placeholder="如危害产品，样品处理要求等信息" border="{{ false }}" />
+		</view>
+		<view>
+			<view class="de-wz"><span class="op">*</span> 添加图片: </view>
+
+			<view class="mt">
+				<van-uploader file-list="{{ fileList }}" max-count='1'  class="imgt"  multiple bind:after-read="afterRead"  bind:delete="de" />
+			</view>
+		</view>
+	</view>
+	<view class="buttom2" bindtap="czxu">重置</view>
+	<view class="buttom" bindtap="bc">保存</view>
+</view>

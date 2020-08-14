@@ -1,0 +1,41 @@
+<view class="main">
+	<van-tabs active="{{ active }}" bind:change="onChange">
+			<van-tab title="个人"></van-tab>
+		<van-tab title="单位"></van-tab>
+
+	</van-tabs>
+
+	<view class="detection-main">
+			<view wx:if="{{active==1}}">
+			<view class="de-wz"  > <span>*</span> 单位名称：</view>
+			<van-field   model:value="{{dwmc}}" clearable placeholder=" 请输入名称" border="{{ false }}" />
+		</view>
+		<view>
+			<view class="de-wz"  wx:if="{{active==0}}" > <span>*</span> 姓名：</view>
+			<view class="de-wz"  wx:if="{{active==1}}"  > <span>*</span> 联系人：</view>
+			<van-field   model:value="{{xm}}" clearable placeholder=" 请输入名称" border="{{ false }}" />
+		</view>
+		<view>
+			<view class="de-wz"><span>*</span>联系电话：</view>
+			<van-field model:value="{{dh}}" clearable placeholder="请输入联系电话" border="{{ false }}" />
+		</view>
+				<view>
+			<view class="de-wz"><span class="op">*</span> 地址：</view>
+			<van-field model:value="{{ dz }}" clearable placeholder="请输入详细地址" border="{{ false }}" />
+		</view>
+		
+		<view>
+			<view class="de-wz"><span  class="op">*</span> 传真：</view>
+			<van-field model:value="{{ cz }}" clearable placeholder="请输入联系传真" border="{{ false }}" />
+		</view>
+
+
+
+
+		
+
+	
+	</view>
+
+	<view class="buttom" bindtap="tc"> 保存</view>
+</view>

@@ -1,0 +1,97 @@
+.invoice-list{
+  background:#fff;
+border-radius:6px;
+margin:10px;
+padding: 15px;
+font-size:29px;
+font-family:PingFang;
+font-weight:500;
+color:rgba(51,51,51,1);
+
+}
+
+.invoice-list2{
+
+padding: 6px 15px;
+
+
+}
+.invoice-list span{
+  color: #FF0000FF;
+}
+.van-radio__label{
+ 
+ font-size: 26rpx;
+}
+.rado{
+  width: calc(100% - 70px)
+}
+.ttlx2>view:nth-child(2){
+  margin-top: 3px;
+  margin-left: 5px;
+  color: #D1CECF;
+}
+.ttlx2{display: flex;
+  width: calc(100% - 90px);
+  justify-content: flex-end;
+
+}
+
+.ttlx>view:nth-child(2){
+
+  margin-left: 5px;
+  color: #D1CECF;
+}
+.ttlx{display: flex;
+  width: calc(100% - 70px);
+  justify-content: flex-end;
+
+}
+van-radio-group{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+
+}
+.van-field__input{
+  font-weight: initial!important;
+}
+.van-cell{
+  padding:0px!important;
+  margin-top: -3px;
+}
+.main{
+  padding-top: 1px;
+}
+.view{
+  font-size: .8rem;
+}
+van-radio{
+  margin:0px 5px;
+}
+.invoice-list>view{
+  display: flex;
+  padding:9px 0px;
+}
+.invoice-list van-icon{
+ font-size: 34rpx;
+
+
+}
+.buttom2{
+  margin:10px;
+  height: 50px;
+  background:rgba(244,158,0,1);
+
+border-radius:3px;
+color: #fff;
+text-align: center;
+font-size: 36rpx;
+padding-top: 24rpx;
+}
+.vani{
+
+  margin-left: 10px ;
+
+}

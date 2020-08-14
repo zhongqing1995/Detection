@@ -1,0 +1,57 @@
+.buttom{
+  margin:10px;
+  height: 50px;
+  background:rgba(244,158,0,1);
+
+border-radius:3px;
+color: #fff;
+text-align: center;
+font-size: 36rpx;
+padding-top: 24rpx;
+}
+.mt{
+  padding-top: 1px;
+}
+.zfc van-icon{
+  color: #fff;
+  font-size: 48px;
+}
+.buttom2{
+  margin:10px;
+  height: 50px;
+border:1px solid rgba(244,158,0,1);
+
+border-radius:3px;
+color: rgba(244,158,0,1);
+text-align: center;
+font-size: 36rpx;
+padding-top: 24rpx;
+}
+.zfc{
+  width:74px;
+
+height:74px;
+text-align: center;
+padding-top: 12px;
+background: rgba(28, 174, 111, 1);
+border-radius: 50%;
+margin:0 auto;
+margin-top: 50px;
+
+}
+.zfc-main{
+  height:251px;
+background:rgba(255,255,255,1);
+border-radius:5px;
+margin:10px;
+text-align: center;
+
+font-family:PingFang;
+font-weight:bold;
+color:rgba(51,51,51,1);
+padding-top: 1px;
+}
+.zfc-wz{
+  margin-top: 20px;
+  font-size:16px;
+}

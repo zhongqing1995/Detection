@@ -1,0 +1,162 @@
+/* miniprogram/pages/detection/index.wxss *//* miniprogram/pages/detection/index.wxss */.detection-main
+{
+  background:rgba(255,255,255,1);
+border-radius:6px;
+
+}
+.detection-main{
+  margin:15px;
+  border-radius: 6px;
+  overflow: hidden;
+  padding:8px
+}
+.main-d{
+  padding-top: 1px;
+ 
+  background: #f8f8f8;
+  padding-bottom: 40px;
+}
+.de-wz{
+  font-size:14px;
+font-family:PingFang;
+font-weight: bold;
+
+
+
+}
+.de-wz span{
+  color: #FF0000FF;
+  
+}
+.detection-main .van-cell {
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+.detection-main>view{
+  border-bottom: 1px solid #f2f2f2 ;
+  padding: 10px;
+}
+.de-xz{
+  display: flex;
+
+}
+.buttom{
+  margin:10px;
+  height: 50px;
+  background:rgba(244,158,0,1);
+
+border-radius:3px;
+color: #fff;
+text-align: center;
+font-size: 36rpx;
+padding-top: 24rpx;
+}
+van-button{
+  width: 100%!important ;
+}
+van-button button {
+  width: 100%!important ;
+}
+.van-calendar__confirm {
+  width: 100%!important ;
+  background:rgba(244,158,0,1)!important ;
+}
+.yysj{
+  padding-top: 10px;
+  display: flex;
+}
+.yysj>view:nth-child(2){
+margin:0px 7px;
+}
+.de-xz>view{
+  background:rgba(255,255,255,1);
+border:1px solid rgba(232,232,232,1);
+border-radius:3px;
+padding:5px 10px;
+font-size: 13px;
+margin: 10px 10px 10px 0px;
+}
+.quanj button{
+  width: 100%;
+  height: auto;
+  background: transparent;
+  margin: 0px;
+  display: inline;
+  position: initial;
+  padding: 0px;
+  color: rgba(244, 158, 0, 1);
+
+  line-height: initial;
+  font-weight: initial;
+}
+.tl-h3{
+  font-size:18px;
+  font-family:PingFang;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+border-bottom:1px solid rgba(232,232,232,1);
+margin-left: 15px;
+padding: 15px 0px;
+
+}
+.tl-h3 .van-field__input{color: #999999;
+  font-size: 16px!important;}
+.quanj span{
+  color: #fff;
+  font-size: 24px;
+}
+.quanj{
+  background:rgba(244,158,0,1); 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding-top: 8px;
+  text-align: center;
+  position: fixed;
+  right: 10px;
+  top: 20%;
+  z-index: 1000;
+}
+.but2 button{
+  background: transparent;
+  color: #fff;
+  padding:0px;
+  }
+.de-xz .xzcg{
+  background: rgba(244,158,0,1);
+  color: #fff;
+  border:1px solid rgba(244,158,0,1);
+}
+.tl-h2{
+  font-size:20px;
+font-family:PingFang;
+font-weight:bold;
+color:rgba(51,51,51,1);
+margin-left: 15px;
+margin-top: 20px;
+}
+.shous{
+  display: flex;
+}
+.shous>view:nth-child(1){
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.shous>view:nth-child(2){
+ line-height: 30px;
+ padding-top: 10px;
+ padding-left: 15px;
+}
+.shoq-wz{
+  border-left: 3px solid #F49E00;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 15px;
+  }
+  .but2{
+    margin-left: 0px;
+    margin-right:0px ;
+  }

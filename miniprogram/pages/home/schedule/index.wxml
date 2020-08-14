@@ -1,0 +1,95 @@
+<view class="main">
+
+	<van-tabs active="{{st}}" bind:change="onChange" border="false">
+		<van-tab title="评估中" name="1" />
+		<van-tab title="待付款" name="2" />
+		<van-tab title="已付款" name="3" />
+		<van-tab title="检测中" name="8" />
+		<van-tab title="已完成" name="5" />
+	</van-tabs>
+	<van-notice-bar
+  color="#F59D00"
+	scrollable='false'
+  left-icon="info-o"
+	bindtap="tz" 
+	data-a="details/index"
+	data-id="1597050317221"
+  text="关注塔比服务Tabby公众号，可以实时追踪订单信息"
+/>
+	<mp-loading duration="{{900}}" ext-class="demo0" type="dot-gray" show="{{jd_list.length==0}}" animated="{{animated}}"></mp-loading>
+	<view class="zanwu" wx:if="{{jd_list.length==0}}">
+		<image src="../../../images/zan.jpg"></image>
+		<view wx:if="{{st!=5}}">暂无检测信息</view>
+		<view wx:if="{{st==5}}"> 暂无检测报告</view>
+		<view>
+			当前暂无检测信息，如有疑问可咨询 <span> <button bindcontact open-type="contact"> 在线客服</button> </span> </view>
+		<view>
+			服务电话：400-9669-523
+		</view>
+		<view bindtap="tz" data-a="detection/index">在线委托</view>
+	</view>
+	<view class="main-seach" wx:for="{{jd_list}}" wx:key="this" wx:for-item="items">
+		<view class="main-seach-bh">
+			<view>
+				<van-icon name="orders-o" />
+				<view>委托编号：{{items.code}}</view>
+			</view>
+			<!-- <view class="buttom ys1" wx:if="{{items.status==0}}">待处理</view> -->
+			<view class="buttom ys2" wx:if="{{items.status==1}}">评估中</view>
+			<view class="buttom ys1" wx:if="{{items.status==2}}">待付款</view>
+			<view class="buttom ys3" wx:if="{{items.status==3}}">已付款</view>
+			<view class="buttom ys4" wx:if="{{items.status==4}}">检测中</view>
+			<view class="buttom ys4" wx:if="{{items.status==6}}">检测中</view>
+      <view class="buttom ys4" wx:if="{{items.status==7}}">检测中</view>
+			<view class="buttom ys1" wx:if="{{items.status==5}}">已完成</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				检测类别：
+			</view>
+			<view>
+				{{items.checktypeid==1?"有色金属元素":"环保检测项目"}}
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				委托时间：
+			</view>
+			<view>
+				{{items.createtime}}
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				客户经理：
+			</view>
+			<view>
+				李登科
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				合计金额：
+			</view>
+			<view>
+				<span wx:if="{{!items.totalamount}}"> 评估中</span>
+				<span wx:if="{{items.totalamount}}">¥ {{items.totalamount}}</span>
+			</view>
+		</view>
+		<view class="main-seach-wz2">
+			<view data-a="detection/detection-d/index" data-id="{{items.id}}" bindtap="tz" wx:if="{{items.status!=5}}" >查看详情</view>
+			<view wx:if="{{st==1}}" class="{{items.isurgent==1?'cgwz':'sbwz'}}">
+				<view wx:if="{{!items.isurgent}}" bindtap="jaj" data-id="{{items.id}}">
+					快马加鞭
+				</view>
+				<view wx:if="{{items.isurgent}}">
+					已加速
+				</view>
+			</view>
+			<view><button class="tab-button" bindcontact open-type="contact">一键咨询 </button> </view>
+			<view wx:if="{{st==3||st==4||st==5||st==6||st==7}}" bindtap="tz"    data-id="{{items.id}}" data-a="home/invoice/index" >发票申请</view>
+			<view data-code="{{items.code}}" data-totalamount="{{items.totalamount}}" wx:if="{{st==2}}" bindtap="zf">支付订单</view>		
+			<view data-a="home/report_2/index"  wx:if="{{items.status==5}}"  data-id="{{items.id}}"   bindtap="tz">报告获取</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,114 @@
+<!--miniprogram/pages/index/index.wxml-->
+
+<view class="main">
+	<van-dialog id="van-dialog" />
+	<!-- <view class="kaic" wx:if="{{show3}}" >
+		<view class="kaic-ban3"/>
+		<view class="kaic-ban4"/>
+				<view class="kaic-ban5"/>
+		<view class="home-pd"><image class="bg_ware" src="https://moyv.top/wechat/images/bg_wave.gif"></image></view>
+		<view class="imgtop">
+		<image src="../../images/tbtp.jpg"></image>
+		</view>
+		<view class="kaic-wz">
+			<view>掌</view>
+			<view>信</view>
+			<view>检</view>
+			<view>测</view>
+		</view>
+		<view class="kaic-wz2">科学，精准，公允，诚信</view>
+		<view class="kaic-ban" />
+		<view class="kaic-ban2" />
+	<view class="kaic-ban6" />
+	</view> -->
+
+
+<view class='page-cont' wx:if="{{isTiptrue}}">
+  <view class='top'>
+    <image src='../../images/jt.png'></image>
+    <view class='p_one'>添加掌信检测小程序，解决任何检测问题</view>
+  </view>
+  <view class='cont'>
+    <view class='cont-p'>
+      <view class='text'><text>1</text></view><view>点击右上角</view>
+      <image src='../../images/dian.png'></image>
+    </view>
+    <view class='cont-p'>
+      <view class='text'><text>2</text></view><view>点击“添加我的小程序”</view>
+    </view>
+    <view class='cont-p'>
+      <view class='text'><text>3</text></view><view>回到微信首页下拉聊天列表，</view>
+    </view>
+    <view class='cont-p-lib'>
+      <view class='text' style='opacity:0;'><text>3</text></view><view>从“我的小程序”里打开“掌信检测”</view>
+    </view>
+    <view class='cont-p-three'>
+
+      <view class='right'>
+          <view class='left-p'>
+            <view class='title'>我的小程序</view>
+            <image src='../../images/tbtp.jpg'></image>掌信检测</view>
+          <view class='left-p'>
+            <view class='title' style='opacity:0;'>我的小程序</view>
+            <view style='color:#4C4C4E;width:27px;height:27px; margin-top: 5px; margin-bottom: 5px;border-radius:50%;background:#4C4C4E;'></view>小程序</view>
+      </view>
+    </view>
+  </view>
+  <view class='bottom' bindtap='closeThis'>记住了  我去试试</view>
+</view>
+
+
+
+	<view class="m">
+		<home wx:if="{{id==1}}" />
+		<consult wx:if="{{id==2}}" />
+		<detection wx:if="{{id==3}}" />
+		<servic wx:if="{{id==4}}"></servic>
+		<user getuser='{{getuser}}' wx:if="{{id==5}}" />
+	</view>
+
+
+	<view class="bottom-tab">
+		<view bindtap="tab_tz" data-id="1" class="{{id==1?'xzcg':'xzsb'}}">
+			<view>
+				<span class="iconfont icon-shouye"></span>
+			</view>
+			<view>
+				首页
+			</view>
+		</view>
+		<button class="tab-button" bindcontact open-type="contact">
+			<view class="wcz">
+				<span class="iconfont icon-zixun"></span>
+			</view>
+			<view>
+				咨询
+			</view>
+		</button>
+		<view bindtap="tab_tz" data-id="3" class="{{id==3?'xzcg':'xzsb'}}">
+			<view class="tab-zxy">
+				<span class="iconfont icon-woyaojiance"></span>
+			</view>
+			<view class="tab-zxy-wz">
+				我要检测
+			</view>
+		</view>
+		<view bindtap="tab_tz" data-id="4" class="{{id==4?'xzcg':'xzsb'}}">
+
+			<view>
+				<span class="iconfont icon-fuwu"></span>
+			</view>
+			<view>
+		资讯
+			</view>
+		</view>
+		<view bindtap="tab_tz" data-id="5" class="{{id==5?'xzcg':'xzsb'}}">
+			<view>
+				<span class="iconfont icon-wode"></span>
+			</view>
+			<view>
+				我的
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,61 @@
+<view class="de-main">
+	<view class="detail-tl">
+		{{ deta.title}}
+	</view>
+	<view class="fenweix">
+
+		<view bindtap="top">
+			<van-icon name="arrow-up" />
+		</view>
+
+		<view>
+			<button open-type="share" data-name="pageShare" id="share"  >
+				<span class="iconfont icon-weixin"></span>
+			</button>
+		</view>
+		
+
+
+	</view>
+
+
+	<view class="detail-sj">
+		<view>时间：{{deta.pubtime}}</view>
+		<view>编辑：掌信新闻</view>
+	</view>
+	<view class="detil">
+		<rich-text nodes="{{ html}}"></rich-text>
+	</view>
+
+	<view class="m3">
+		<view class="home-ggtp" bindtap="tzxcx">
+			<image src="../../images/gg-2.gif"></image>
+		</view>
+		<view class="home-jcly">
+			<view class="tille-1">
+				热门推荐
+			</view>
+			<view class="home-list" wx:for="{{tz_list}}" wx:key="this" wx:for-item="items" data-id="{{items.id}}" bindtap="tz" data-a="details/index">
+				<view class="home-list-left">
+					<view>
+						<image src="{{items.preimage}}"></image>
+					</view>
+					<view>{{items.title}}</view>
+				</view>
+				<view class="home-list-right">
+					<view>{{items.desc}}</view>
+					<view class="home-list-bottom">
+						<view>
+							<view>
+								<van-icon name="underway-o" />
+							</view>
+							<view>{{items.pubtime}}</view>
+						</view>
+
+						<view>热点</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

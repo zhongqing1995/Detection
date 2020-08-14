@@ -1,0 +1,144 @@
+<view class="main">
+
+
+	<view class="main-seach">
+		<view class="main-seach-bh">
+			<view>
+				<van-icon name="orders-o" />
+				<view>委托编号：{{xq_list.protocol.code}}</view>
+			</view>
+		</view>
+
+		<view class="tl-h1">基本信息</view>
+		<view class="main-seach-wz1" wx:if="{{xq_list.contact.contactname!== undefined}}">
+			<view>
+				委托单位：
+			</view>
+			<view>
+				{{xq_list.contact.contactname}}
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				姓名：
+			</view>
+			<view>
+				{{xq_list.contact.name}}
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				地址：
+			</view>
+			<view>
+				{{xq_list.contact.address}}
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				联系电话：
+			</view>
+			<view>
+				{{xq_list.contact.phoneno}}
+			</view>
+		</view>
+		<view class="xian"></view>
+
+		<view class="main-seach-wz1">
+			<view>
+				检测类别：
+			</view>
+			<view>
+				{{xq_list.protocol.checktypeid==1?"有色金属元素":"环保检测项目"}}
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				检测类型：
+			</view>
+			<view wx:if="{{xq_list.protocol.checktype==1}}">
+				委托检测
+			</view>
+			<view wx:if="{{xq_list.protocol.checktype==2}}">
+				仲裁检验
+			</view>
+			<view wx:if="{{xq_list.protocol.checktype==3}}">
+				其他检测
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				服务类型：
+			</view>
+			<view>
+				{{xq_list.protocol.servicetype==1?"标准":"加急"}}
+			</view>
+		</view>
+		<view class="xian"></view>
+		<van-popup show="{{ show }}" bind:close="onClose">
+			<view class="imgop2">
+				<image src="{{yltp}}"></image>
+			</view>
+		</van-popup>
+		<view class="tl-h1">样品信息</view>
+		<view class="xian" wx:for="{{xq_list.protocolitems}}" wx:key="this" wx:for-item="items">
+			<view class="main-seach-wz1" wx:if="{{!items.checkitemname}}">
+				<view>
+					样品委托单：
+				</view>
+				<view class="imgop" bindtap="tptl" data-id="http://jc.tabbyedu.com/pay/file/{{items.attchment}}">
+					<image src="http://jc.tabbyedu.com/pay/file/{{items.attchment}}"></image>
+				</view>
+			</view>
+
+
+			<view class="main-seach-wz1" wx:if="{{items.checkitemname}}">
+				<view>
+					样品名称：
+				</view>
+				<view>
+					{{items.samplename}}
+				</view>
+			</view>
+			<view class="main-seach-wz1" wx:if="{{items.checkitemname}}">
+				<view>
+					样品编号：
+				</view>
+				<view>
+					{{items.originalid}}
+				</view>
+			</view>
+			<view class="main-seach-wz1" wx:if="{{items.checkitemname}}">
+				<view>
+					检测项目：
+				</view>
+				<view>
+					{{items.checkitemname}}
+				</view>
+			</view>
+			<view class="main-seach-wz1" wx:if="{{items.checkitemname}}">
+				<view>
+					其他信息：
+				</view>
+				<view>
+					{{items.remark}}
+				</view>
+
+			</view>
+
+
+		</view>
+
+		<view class="main-seach-wz" wx:if="{{xq_list.protocol.status==1}}">
+			费用估中，请耐心等待...
+		</view>
+		<view class="main-seach-wz" wx:if="{{xq_list.protocol.status!=1}}">
+			合计金额：¥{{xq_list.protocol.totalamount}}
+		</view>
+	</view>
+
+	<button class="button" bindcontact open-type="contact">
+		<view class="buttom" bindtap="bc" wx:if="{{xq_list.protocol.status==1}}">联系客服</view>
+	</button>
+	<view class="buttom" bindtap="zf" wx:if="{{xq_list.protocol.status==2}}">在线支付</view>
+</view>

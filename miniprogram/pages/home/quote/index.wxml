@@ -1,0 +1,47 @@
+<view class="main">
+
+	<view class="quote-img">
+		<image src="../../../images/gg.jpg"></image>
+	</view>
+	<view class="quote-lb">
+
+		<view class="vis-buttom2">
+			<button bindcontact open-type="contact">
+				<view class="ht">
+					<span class="iconfont icon-weixin"></span>
+				</view>
+				<view>
+					在线客服
+				</view>
+				<view>
+
+					点击联系客服经理
+				</view>
+
+				<view>
+
+					24小时在线咨询
+				</view>
+			</button>
+		</view>
+
+
+		<view class="vis-buttom2" bindtap="tz" data-a="detection/index">
+			<view class="ht pt">
+				<span class="iconfont icon-baojia1"></span>
+			</view>
+			<view>
+				需求报价
+			</view>
+			<view>
+				提交检测样品信息
+			</view>
+			<view>
+				快速获取检测报价
+			</view>
+		</view>
+
+	</view>
+
+
+</view>

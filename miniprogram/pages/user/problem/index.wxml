@@ -1,0 +1,18 @@
+<view class="ma">
+
+
+	<van-collapse value="{{ activeNames }}" bind:change="onChange">
+		<van-collapse-item name="{{index}}" wx:for="{{wt_list}}"  wx:for-index="index"  wx:key="this" wx:for-item="items">
+			<view slot="title" class="dis_wz">
+				<view>问</view>
+				<view>{{items.title}}</view>
+			</view>
+      <view  class="dis_wz2">
+      	<view>答</view>
+				<view class="tiel">{{items.desc}}</view>
+      </view>
+
+		</van-collapse-item>
+
+	</van-collapse>
+</view>

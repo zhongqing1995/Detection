@@ -1,0 +1,133 @@
+.vis-buttom{
+  margin:10px;
+  height: 50px;
+
+  background:rgba(255,255,255,1);
+border:1px solid rgba(244,158,0,1);
+border-radius:3px;
+color: #F49E00FF;
+text-align: center;
+font-size: 36rpx;
+padding-top: 23rpx;
+}
+
+.vis-buttom2{
+ 
+
+width: 47%;
+background: #fff; 
+border-radius:3px;
+padding: 15px;
+text-align: center;
+font-size: 36rpx;
+padding-top: 23rpx;
+}
+
+.quote-img{
+  height:248px;
+}
+.quote-lb{
+  border-radius: 12px;
+  margin:10px;
+  margin-top: -58px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.quote-lb button{
+  width: 46%!important;
+}
+.vis-buttom2>view:nth-child(1){
+
+}
+.ht{
+  height: 56px;
+}
+.vis-buttom2>button>view:nth-child(2){
+  font-size:15px;
+  font-family:PingFang;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+margin-top: 10px;
+margin-bottom: 8px;
+}
+.icon-baojia1{
+  color: #ECA000
+}
+
+.vis-buttom2>button>view:nth-child(3){
+  font-size:12px;
+font-family:PingFang;
+
+font-weight:500;
+color:rgba(153,153,153,1);
+line-height:26px;
+}
+.vis-buttom2>button>view:nth-child(4){
+  font-size:12px;
+font-family:PingFang;
+
+font-weight:500;
+color:rgba(153,153,153,1);
+line-height:26px;
+}
+
+.vis-buttom2>view:nth-child(2){
+  font-size:15px;
+  font-family:PingFang;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.pt{
+  padding-top: 3px;
+  height: 54px;
+}
+.vis-buttom2 .icon-weixin{
+  color: #6AC23C;
+}
+.vis-buttom2 .icon-baojia{
+  color: #ECA000
+}
+.vis-buttom2>view:nth-child(3){
+  font-size:12px;
+font-family:PingFang;
+
+font-weight:500;
+color:rgba(153,153,153,1);
+line-height:26px;
+}
+.vis-buttom2>view:nth-child(4){
+  font-size:12px;
+font-family:PingFang;
+
+font-weight:500;
+color:rgba(153,153,153,1);
+line-height:26px;
+}
+.vis-buttom2>view:nth-child(4){
+  font-size:12px;
+font-family:PingFang;
+
+font-weight:500;
+color:rgba(153,153,153,1);
+line-height:26px;
+}
+ button {
+  width: auto !important;
+  height: auto !important;
+  background: transparent;
+  margin: 0px;
+  padding: 0px!important;
+  font-weight: lighter;
+  overflow: visible;
+  font-weight: initial!important;
+  display: initial;
+  line-height: initial;
+  margin-top: -3px;
+
+}
+.vis-buttom2 span{
+  font-size: 40px;
+}

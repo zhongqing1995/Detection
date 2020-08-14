@@ -1,0 +1,124 @@
+<view class="main">
+
+
+	<view class="main-seach" >
+		<view class="main-seach-bh">
+			<view>
+				<van-icon name="orders-o" />
+				<view>编号：{{xq_list.protocol.code}}</view>
+			</view>
+			<view class="buttom ys1">已完成</view>
+		</view>
+	
+	
+		<view class="main-seach-wz1">
+			<view>
+				检测类别：
+			</view>
+			<view>
+				{{xq_list.protocol.checktypeid==1?"有色金属元素":"环保检测项目"}}
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				委托时间：
+			</view>
+			<view>
+				{{xq_list.protocol.uniquenessno}}
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+			客户经理：
+			</view>
+			<view>
+				李登科
+			</view>
+		</view>
+		<view class="main-seach-wz1">
+			<view>
+				合计金额：
+			</view>
+			<view>
+				<span> {{xq_list.protocol.totalamount}}</span>
+			</view>
+		</view>
+		<view class="re-de" wx:for="{{items.protocolitems}}" wx:key="this" wx:for-item="items2">
+			<view class="re-wz11">样品编号：{{items2.originalid}}</view>
+			<view class="re-dedis">
+				<view class="re-de2">
+					<view>Au(g/t)：</view>
+					<view>2.30</view>
+				</view>
+				<view>
+				</view>
+			</view>
+		</view>
+
+		<view class="main-sc">
+			<view class="dis">
+				<view class="de-wz mw">报告获取方式：</view>
+				<view class="de-xz">
+					<view data-id="1" bindtap="xz" class="{{lx=='1'?'xzcg':'xzsb'}}">自取</view>
+					<view data-id="2" bindtap="xz" class="{{lx=='2'?'xzcg':'xzsb'}}">传真</view>
+					<view data-id="4" bindtap="xz" class="{{lx=='4'?'xzcg':'xzsb'}}">邮寄</view>
+				</view>
+			</view>
+
+
+			<view class="main-dzx" wx:if="{{lx=='1'}}">
+				<view>
+					<van-icon name="location-o" />
+				</view>
+				<view>
+					{{dz}}
+				</view>
+
+			</view>
+			<view class="main-dzx" wx:if="{{lx=='2'}}">
+				<view>
+					<van-icon name="cluster-o" />
+				</view>
+				<view>
+					<van-field value="{{ cz}}" label="传真" placeholder="请输入传真" border="{{ false }}" bind:change="onChange" />
+				</view>
+
+			</view>
+			<view class="main-dzx" wx:if="{{lx=='4'}}">
+				<view>
+					<van-icon name="friends-o" />
+				</view>
+				<view>
+					<van-field value="{{xm }}" label="姓名" placeholder="请输入邮寄" border="{{ false }}" bind:change="onChange" />
+				</view>
+
+			</view>
+			<view class="main-dzx" wx:if="{{lx=='4'}}">
+				<view>
+					<van-icon name="location-o" />
+				</view>
+				<view>
+					<van-field value="{{ dz }}" label="地址" placeholder="请输入地址" border="{{ false }}" bind:change="onChange" />
+				</view>
+
+			</view>
+			<view class="main-dzx" wx:if="{{lx=='4'}}">
+				<view>
+					<van-icon name="phone-o" />
+				</view>
+				<view>
+					<van-field value="{{ sjh }}" label="手机号" placeholder="请输入手机号" border="{{ false }}" bind:change="onChange" />
+				</view>
+
+			</view>
+
+
+
+
+		</view>
+		<view class="buttom2" bindtap="bc">提交</view>
+
+	</view>
+
+
+</view>
